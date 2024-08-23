@@ -1,6 +1,6 @@
 # Linux notes
 
-*A preview of my learning while following the CoderCo bootcamp* 
+*Failure is an option here. If things are not failing, you are not innovating enough* 
 
 ## **Linux fundamentals**
 
@@ -9,6 +9,7 @@
 The general structure of a Linux/UNIX command line looks like:
 
 **Command** [-flag(s)] [-**Option(s)** [value]] [ **Argument(s)**]
+
 
 ### **Basic Linux Commands**
 
