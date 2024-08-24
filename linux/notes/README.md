@@ -24,4 +24,8 @@ The general structure of a Linux/UNIX command line looks like:
 | `mv` | Move or rename |
 | `rmdir` | Remove empty directories |
 | `touch` | Create empty file |
+| `cat` |Concatenate and display file contents |
+| `rm` | delete file |
+| `echo` | add text within document (followed by '> filename') |
+| `grep` | global regular expression print (searching and matching text patterns in files) |
 | `man` | Manual Page |
