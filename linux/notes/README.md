@@ -7,7 +7,8 @@
 + LINUX FUNDAMENTALS
   + Command Line Structure
   + Basic Linux Commands
-  + File management  
+  + File management
+  +   
 
 
 ## **LINUX FUNDAMENTALS**
@@ -18,7 +19,7 @@ The general structure of a Linux/UNIX command line looks like this:
 **Command** [-flag(s)] [-**Option(s)** [value]] [ **Argument(s)**]
 
 
-### **Basic Linux Commands**
+### **Basic linux commands**
 
 | Command | Description |
 | --- | --- |
@@ -68,5 +69,23 @@ Efficent navigation, searching within files, editing texts and even managing con
 | y and p | Copy (yank) and paste |
 | u and Ctrl r | undo change and redo undone change |
 | `:set number` and `:set nonumber` | Show or hide numbering |
+
+
+### Privileged Accounts
+Managing users and their privileges is a crucial part of system administration. This ensures that only administrative users can peform admin tasks.
+
+#### The `sudo` command ####
+- The `sudo` command enables elevated privileges required when creating users and groups.
+- `sudo su` enables root user.
+- Most dangerous command `rm -rf /`
+- to view `sudo` log, use `sudo /var/log/auth.log`.
+
+#### Users and Groups ####
+- You can create a new user and password with `sudo useradd` and `sudo passwd`. To login with them use `su - *newuser*`
+- `sudo usermod -aG` grants `sudo` privileges to an existing user. To remove `sudo` privileges, use `sudo deluser *newuser* sudo`
+- To view groups, use `cat /etc/group`.
+- To create a group use `sudo groupadd *groupname* *newuser*` 
+
+https://chmod-calculator.com/ Chmod Calculator is a free utility to calculate the numeric (octal) or symbolic value for a set of file or folder permissions in Linux servers.
 
 
