@@ -19,7 +19,7 @@ The general structure of a Linux/UNIX command line looks like this:
 **Command** [-flag(s)] [-**Option(s)** [value]] [ **Argument(s)**]
 
 
-### **Basic linux commands**
+### **Basic Linux Commands**
 
 | Command | Description |
 | --- | --- |
@@ -41,7 +41,7 @@ The general structure of a Linux/UNIX command line looks like this:
 Fun fact: Ctrl D ends an input 🤕
 
 
-### **File management**
+### **File Management**
 Efficent navigation, searching within files, editing texts and even managing configuration files are essential skills you need to be more efficent in daily tasks as a DevOps engineer. In the following examples *.txt* will be used, but this could be anything depending on your file (.git, .py .pptx).
 
 #### Creating files and viewing files ####
@@ -88,4 +88,21 @@ Managing users and their privileges is a crucial part of system administration. 
 
 https://chmod-calculator.com/ Chmod Calculator is a free utility to calculate the numeric (octal) or symbolic value for a set of file or folder permissions in Linux servers.
 
+#### File Permissions
+ A **Script** is an executable file, that can be ran as a programme using `vim` mode. Mastering the techniques below is very important to manage files effectively in linux.
+**U**ser, **G**roup, **O**ther: rwx, rwx, rwx
 
+| Bit | Purpose | Octal Value |
+| --- | --- | --- |
+| r | Read | 4|
+| w | Write | 2 |
+| x | Execute | 1 |
+| - | No permission | 0 |
+
+Different ways to give file permission commands:
+- `chmod u+x,g+r,o-w examplefile.txt` or `chmod 142`  To give executable permissions to users, read permissions to group and no permission to others.
+- `chmod +x examplefile.txt` To give executable permissions for all users.
+- `chmod ug=rw,o=r examplefile.txt` To give users and groups read and write permissions, and others readable permissions. *rw-rw-r--*
+- `chown` Changes file owner. An example is `sudo chown newuser examplefile.txt` or `sudo chown ubuntu:newuser examplefile.txt`
+- `chgrp` changes group ownership. An example is `sudo chgrp admin2 examplefile.txt` or `sudo chown -R newuser:admin2 my_directory_example`
+in this example case, both the previous group and user is *ubuntu*, therefore Ubuntu's permissions becomes **Other** when ownership is changed.
