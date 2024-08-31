@@ -145,7 +145,7 @@ This script will be called *greet.sh*. It will present a greeting message on the
 
 **Aliases**: 
 Aliases are shortcuts that allow you to create custom commands. To view your current/default aliases, enter `alias`.
-- Temporary Alias: To create a temporary where `hello` prints `Hello world`, enter `alias hello='echo "hello world"'`
+- Temporary Alias: To create a temporary alias where `hello` prints `Hello world`, enter `alias hello='echo "hello world"'`
 - Permanent Alias: To create a permanent alias, enter the same command above into your $SHELL file. So `vim .zshrc` on the command screen, enter insert mode and paste `alias hello='echo "hello world"'` and `source .zshrc`.
 
 
@@ -161,7 +161,7 @@ Bash enables you to automate tasks, manage systems and boost efficency.
 1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` in `vim examplescript.sh` tells the computer to use bash to run the script. Then enter your script. 
 2) Run your script: Make it executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
 
-#### Writing a script:
+#### Writing a basic script:
 
 #### Shebang `#!` and Comments:
 **Shebang** The shebang provides flexibility by allowing you to specifiy different intepreters or different types of scripts. In `vim` *insert mode*, you can use `#!/usr/bin/python3` for a python script. For ruby scripts, you can use `#!/usr/bin/ruby` instead. Then give executable permissions. 
@@ -171,3 +171,8 @@ Bash enables you to automate tasks, manage systems and boost efficency.
 
 Tip: Place scripts in `$PATH` enviroment variable to run them from anywhere.
 
+#### Variables:
+Above we covered **creating a script that uses an enviromental variable**. These are the steps to create a variable which responds with a script, when the file is accessed: 
+1) Start with naming and accessing the file `Namefile.sh`.
+2) Begin the first line with a shebang like `#!/bin/bash`
+3) To assign a variable to print Hello world, when `Namefile.sh` is entered, enter `greeting="Hello World"` and assign `echo $greeting`. Save the file and grant executable permissions. Now `./Namefile.sh` will print `Hello World`.
