@@ -88,6 +88,7 @@ Managing users and their privileges is a crucial part of system administration. 
 
 https://chmod-calculator.com/ Chmod Calculator is a free utility to calculate the numeric (octal) or symbolic value for a set of file or folder permissions in Linux servers.
 
+
 ### File Permissions
  A **Script** is an executable file, that can be ran as a programme using `vim` mode. Mastering the techniques below is very important to manage files effectively in linux.
 **U**ser, **G**roup, **O**ther: rwx, rwx, rwx
@@ -123,3 +124,28 @@ Understanding data redirection is crucial when handling Standard **Input**, **Ou
  An example using a folder called "*mydirectory*" is `ls nonexistent mydirectory &> terminaloutput.txt`
 
  Lastly `/dev/null` is a virtual null device used to discard any *output* redirected to it. You can use it to unassign `ls nonexistent` from it. It completely discards the output rather than saving or logging it.
+
+
+### Environment Variables
+The $TERM environment variable, usually defined in the shell profile, is a variable that indicates the terminal type. An enviroment variable is set using the `export` command. 
+- Temporary variable: `export NAME=VALUE`, an example of this is `export JAVA_HOME = /usr/bin/java`
+- Permanent variables are set by adding the export command to *.zshrc* or *.bashrc* files. When zsh or bash is being used, it will automatically run the variable.
+To access the enviroment of a specific variable, such as $HOME use the `echo $*HOME*` command. 
+
+#### Setting a variable
+- Temporary variable: `export MY_VAR= "Hello WOrld"`. This sets `$MY_VAR` as the variable.
+- Permanent variable: To assign it to zsh permanently, open `vim .zshrc`. In insert mode enter `export MY_VAR = "Hello WOrld"`. To apply any changes you make on .zshrc or .bashrc, use the `source` command on the main terminal `source .zshrc`
+
+To update an existing variable, such as adding /home/ubuntu to $PATH, enter `export PATH:/home/ubuntu`. This will enable you to create any script you want in */home/ubuntu* and it will recognise that as a programme.
+
+#### Creating a script that uses an enviromental variable
+This script will be called *greet.sh*. It will present a greeting message on the main terminal screen.
+1) `vim greet.sh`. In insert mode, enter your script `echo "Hello, $USER! Welcome to $HOSTNAME."`
+2) Give it executable permission `chmod +x greet.sh`
+3) Now your able to run the script with `./`. Enter `./greet.sh` and it will output `Hello, ubuntu! Welcome to ip-172-33-251-13` on the terminal screen.
+
+**Aliases**: 
+Aliases are shortcuts that allow you to create custom commands. To view your current/default aliases, enter `alias`.
+- Temporary Alias: To create a temporary where `hello` prints `Hello world`, enter `alias hello='echo "hello world"'`
+- Permanent Alias: To create a permanent alias, enter the same command above into your $SHELL file. So `vim .zshrc` on the command screen, enter insert mode and paste `alias hello='echo "hello world"'` and `source .zshrc`.
+
