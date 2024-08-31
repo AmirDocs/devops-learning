@@ -161,7 +161,7 @@ Bash enables you to automate tasks, manage systems and boost efficency.
 1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` in `vim examplescript.sh` tells the computer to use bash to run the script. Then enter your script. 
 2) Run your script: Make it executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
 
-#### Writing a basic script:
+### Writing a basic script:
 
 #### Shebang `#!` and Comments:
 **Shebang** The shebang provides flexibility by allowing you to specifiy different intepreters or different types of scripts. In `vim` *insert mode*, you can use `#!/usr/bin/python3` for a python script. For ruby scripts, you can use `#!/usr/bin/ruby` instead. Then give executable permissions. 
