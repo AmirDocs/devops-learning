@@ -18,7 +18,7 @@
 The general structure of a Linux/UNIX command line looks like this:
 **Command** [-flag(s)] [-**Option(s)** [value]] [ **Argument(s)**]
 
-
+\n
 ### Basic Linux Commands:
 | Command | Description |
 | --- | --- |
@@ -39,7 +39,7 @@ The general structure of a Linux/UNIX command line looks like this:
 
 Fun fact: Ctrl D ends an input 🤕
 
-
+\n
 ### File Management:
 Efficent navigation, searching within files, editing texts and even managing configuration files are essential skills you need to be more efficent in daily tasks as a DevOps engineer. In the following examples *.txt* will be used, but this could be anything depending on your file (.git, .py .pptx).
 
@@ -69,7 +69,7 @@ Efficent navigation, searching within files, editing texts and even managing con
 | u and Ctrl r | undo change and redo undone change |
 | `:set number` and `:set nonumber` | Show or hide numbering |
 
-
+\n
 ### Privileged Accounts:
 Managing users and their privileges is a crucial part of system administration. This ensures that only administrative users can peform admin tasks.
 
@@ -87,7 +87,7 @@ Managing users and their privileges is a crucial part of system administration. 
 
 https://chmod-calculator.com/ Chmod Calculator is a free utility to calculate the numeric (octal) or symbolic value for a set of file or folder permissions in Linux servers.
 
-
+\n
 ### File Permissions:
  A **Script** is an executable file, that can be ran as a programme using `vim` mode. Mastering the techniques below is very important to manage files effectively in linux.
 **U**ser, **G**roup, **O**ther: rwx, rwx, rwx
@@ -106,7 +106,7 @@ Different ways to give file permission commands:
 - `chown` Changes file owner. An example is `sudo chown newuser examplefile.txt` or `sudo chown ubuntu:newuser examplefile.txt`
 - `chgrp` changes group ownership. An example is `sudo chgrp admin2 examplefile.txt` or `sudo chown -R newuser:admin2 my_directory_example`
 in this example case, both the previous group and user is *ubuntu*, therefore Ubuntu's permissions becomes **Other** when ownership is changed.
-
+\n
 ### Data Redirection:
 Redirection is a feature in Linux such that when executing a command, you can change the standard input/output devices.
 Understanding data redirection is crucial when handling Standard **Input**, **Output** and **Error Streams**
@@ -124,7 +124,7 @@ Understanding data redirection is crucial when handling Standard **Input**, **Ou
 
  Lastly `/dev/null` is a virtual null device used to discard any *output* redirected to it. You can use it to unassign `ls nonexistent` from it. It completely discards the output rather than saving or logging it.
 
-
+\n
 ### Environment Variables:
 The $TERM environment variable, usually defined in the shell profile, is a variable that indicates the terminal type. An enviroment variable is set using the `export` command. 
 - Temporary variable: `export NAME=VALUE`, an example of this is `export JAVA_HOME = /usr/bin/java`
@@ -148,19 +148,19 @@ Aliases are shortcuts that allow you to create custom commands. To view your cur
 - Temporary Alias: To create a temporary alias where `hello` prints `Hello world`, enter `alias hello='echo "hello world"'`
 - Permanent Alias: To create a permanent alias, enter the same command above into your $SHELL file. So `vim .zshrc` on the command screen, enter insert mode and paste `alias hello='echo "hello world"'` and `source .zshrc`.
 
-
+\n
 ### Linux CLI shortcuts:
 Entering `history` on command, will show you your a list of previously executed commands, each command is numbered to allow you to easily re-execute them with `!` (`!244` runs command 244). Another shortcut is*Ctrl r* on you're keyboard. Continuously pressing *Ctrl r* will reverse search commands. *Ctrl j* will insert the command wihout executing.
 
-
-
+\n
+\n
 ## SCRIPTING WITH BASH
 **Bash** is a command-line tool that interacts with your computer. A **bash script** is a file containing a series of commands you want the computer to execute automatically.
 Bash enables you to automate tasks, manage systems and boost efficency.
 
 1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` in `vim examplescript.sh` tells the computer to use bash to run the script. Then enter your script. 
 2) Run your script: Make it executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
-
+\n
 ### Writing a basic script:
 
 #### Shebang `#!` and Comments:
