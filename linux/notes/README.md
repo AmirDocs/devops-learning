@@ -18,7 +18,7 @@
 The general structure of a Linux/UNIX command line looks like this:
 **Command** [-flag(s)] [-**Option(s)** [value]] [ **Argument(s)**]
 
-\n
+
 ### Basic Linux Commands:
 | Command | Description |
 | --- | --- |
