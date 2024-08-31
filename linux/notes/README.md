@@ -151,3 +151,23 @@ Aliases are shortcuts that allow you to create custom commands. To view your cur
 
 ### Linux CLI shortcuts:
 Entering `history` on command, will show you your a list of previously executed commands, each command is numbered to allow you to easily re-execute them with `!` (`!244` runs command 244). Another shortcut is*Ctrl r* on you're keyboard. Continuously pressing *Ctrl r* will reverse search commands. *Ctrl j* will insert the command wihout executing.
+
+
+
+## SCRIPTING WITH BASH
+**Bash** is a command-line tool that interacts with your computer. A **bash script** is a file containing a series of commands you want the computer to execute automatically.
+Bash enables you to automate tasks, manage systems and boost efficency.
+
+1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` in `vim examplescript.sh` tells the computer to use bash to run the script. Then enter your script. 
+2) Run your script: Make it executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
+
+#### Writing a script:
+
+#### Shebang `#!` and Comments:
+**Shebang** The shebang provides flexibility by allowing you to specifiy different intepreters or different types of scripts. In `vim` *insert mode*, you can use `#!/usr/bin/python3` for a python script. For ruby scripts, you can use `#!/usr/bin/ruby` instead. Then give executable permissions. 
+
+- **Single line comment `#`:** Use `#` to start a comment in insert mode. 
+- **Multiline comment`:'comment'`:** start the line with `: 'anything between this will be regarded as a comment'`
+
+Tip: Place scripts in `$PATH` enviroment variable to run them from anywhere.
+
