@@ -1,4 +1,4 @@
-# Linux notes
+# Linux Learning
 
 *Failure is an option here. If things are not failing, you are not innovating enough* 
 
@@ -182,3 +182,9 @@ You can assign anything with a variable such as a name, using `name="Amir"` and 
 Parameters allow you to customize the behaviour of your script and make it more flexible. Parameters are passed on the main command line. When executing a script with parameters, the values passed on the command line will be subsituted into the scripts of $1 and $2.
 In `vim` insert mode, list `echo "parameter1: $1` and `echo "parameter2: $2`. *Parameter1* is changeable and can be named something else as this is an example. 
 On the main command terminal, to pass the two parameters above enter `./Namefile.sh *hello hey*`. To run all parameters in one output, enter `vim` and insert `echo "All Parameters: $@"`
+
+### Arithmetic Expansion `$(())`:
+Arithmetic expansion allows the evaluation of an arithmetic expression and the substitution of the result. This allows you to perform a variety of mathematical operations, such as addition, subtraction, multiplication, and division.
+
+Example: $((10*3))
+
