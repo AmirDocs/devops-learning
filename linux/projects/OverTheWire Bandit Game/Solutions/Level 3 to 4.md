@@ -7,6 +7,7 @@ The password for the next level is stored in a hidden file in the **inhere** dir
 
 ### Commands used:
 
+- `pwd`
 - `ls`
 - `ls -a`
 - `cat "...Hiding-From-You"`
