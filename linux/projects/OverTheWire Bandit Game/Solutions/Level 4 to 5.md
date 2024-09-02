@@ -11,7 +11,7 @@ Tip: if your terminal is messed up, try the “reset” command.
 - `ls`
 - `cd`
 - `file ./*`
-- `cat ./-`
+- `cat ./-file07`
 
 
 ### Password:
