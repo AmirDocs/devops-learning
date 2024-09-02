@@ -9,6 +9,7 @@ The password for the next level is stored in a file called **spaces in this file
 
 - `pwd` 
 - `cat "spaces in this filename"`
+
 ### Password:
 ```
 MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
