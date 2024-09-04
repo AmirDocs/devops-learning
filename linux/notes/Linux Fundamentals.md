@@ -25,9 +25,9 @@
 
 The general structure of a Linux/UNIX command line looks like this:
 
-``
+```
 Command -Option(s) Argument(s)
-``
+```
 
 ### **Basic Linux Commands**:
 | Command | Description |
