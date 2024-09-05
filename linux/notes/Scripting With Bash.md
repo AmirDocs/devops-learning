@@ -121,4 +121,49 @@ fi
 ```
 
 ### **else and elif**:
-else provides an alternative code block to be executed when the `if` condition evaluates to false.
+**else** provides an alternative code block to be executed when the `if` condition evaluates to false. When you enter the structure of an `if` statement, under *Code block if condition is true* add on:
+```
+else
+    # Code block if condition is false
+fi
+```
+Now, this will provide you with two statements, depending on whether it is true or false.
+
+**elif** on the other hand, allows you to and a second condition if the first one is false. An example which includes `if`, `elif` and `else` is below:
+```
+#!/bin/bash
+
+score=85
+
+if [ $score -ge 90 ]
+then
+    echo "Excellent!"
+elif [ $score -ge 80 ]
+    echo "Good!"
+else
+    echo "Better luck next time!"
+fi
+```
+
+### **Nested `if` statements**:
+Nested `if` statements allows more complex decision making structures, by embedding `if` statements within other `if` statements. This allows the evaluation of multiple conditions. An example of a scholarship based eligibility, which is determined by their age and grade is below:
+```
+#!/bin/bash 
+
+age=20
+grade=85
+
+if [ $age -ge 18 ]; then
+    echo "You are eligible based on age"
+    if [ $grade -ge 80 ]; then
+        echo "You are eligible based on grade"
+        echo "Congrats! You are eligible for the scholarship!"
+    else
+        echo "Sorry your grade is not high enough"
+     fi
+else
+    echo "sorry, you are not eligible for the scholarship"
+fi
+```
+
+
