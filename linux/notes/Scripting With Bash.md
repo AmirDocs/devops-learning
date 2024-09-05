@@ -71,4 +71,54 @@ Rectangle area: 40
 Rectangle perimeter: 26
 ``` 
 
+## **Conditional Statements**
 
+### **`if` Statements and their structure**:
+If statements allow you to create decisions and execute different code blocks based on conditions. These conditions are formed using comparison operators and logical operators. You can compare numbers strings and combined conditions using logical operators.
+
+The structure of an `if` statement looks like this:
+```
+#!/bin/bash
+
+if condition
+then
+     # Code block to be executed
+fi
+```
+Conditions in `if` statements are formed using Comparison operators, here are a few: 
+| Operator | Description |
+| --- | --- |
+| `eq` | Equals |
+| `ne` | Not equal to |
+| `lt` | Less than |
+| `gt` | Greater than |
+| `le` | Less than or equal to |
+| `ge` | Greater than or equal to |
+
+Here is an example of a `if` statement, with *two* parameteres. `&&` is used to introduce the second statement. If the age is `ge` than 90 and `le` than 100 then execute "Excelllent":
+
+```
+#!/bin/bash
+
+grade=95
+
+if [ $grade -ge 90 ] && [ $grade -le 100 ]
+then
+   echo "Excellent!"
+fi
+```
+
+Another example script, that will print Hello to the specified user:
+```
+#/!bin/bash
+
+name= "Amir"
+
+if [ "$name" == "Amir" ]
+then
+   echo "Hello, Amir"
+fi
+```
+
+### **else and elif**:
+else provides an alternative code block to be executed when the `if` condition evaluates to false.
