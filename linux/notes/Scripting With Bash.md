@@ -3,8 +3,8 @@
 **Bash** is a command-line tool that interacts with your computer. A **bash script** is a file containing a series of commands you want the computer to execute automatically.
 Bash enables you to automate tasks, manage systems and boost efficency.
 
-1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` in `vim examplescript.sh` tells the computer to use bash to run the script. Then enter your script. 
-2) Run your script: Make it executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
+1) FIrst line of every file starts with a Shebang line: `#!/bin/bash` this tells the computer to use bash to run the script. Then enter your script. 
+2) Run your script: If you made changes in `vim` mode, make your script executable by entering `chmod +x examplescript.sh` on the main terminal and run it with `./examplescript.sh`, as shown in the **Enviromental variables** section. 
 
 ## **Writing a basic script**:
 
@@ -31,4 +31,42 @@ On the main command terminal, to pass the two parameters above enter `./Namefile
 ## **Arithmetic Expansion** `$(())`:
 Arithmetic expansion allows the evaluation of an arithmetic expression and the substitution of the result. This allows you to perform a variety of mathematical operations, such as addition, subtraction, multiplication, and division.
 
-Example: $((10*3))
+Example: `$((10*3))`
+
+On Visual Studio Code, you can also assign changeable values to the expression. An exmaple is:
+``` 
+#!bin/bash 
+
+num1=5
+num2=10
+
+result=$((num1 + num2))
+
+echo "The sum of $num1 and $num2 is: $result"
+```
+```
+The sum of 5 and 10 is: 15
+```
+
+Below is another example of another Arithmetic Exapansion, this time with **parameters**.
+```
+length="$1"
+width="$2"
+
+area=$((length * width))
+perimeter=$((2 * (length + width)))
+
+echo "Rectangle area: $area"
+echo "Rectangle perimeter: $perimeter"
+```
+then open terminal and enter `chmod +x filename.sh` and run the script followed by the two position parameters 
+```
+./filename.sh`
+8 5
+```
+```
+Rectangle area: 40
+Rectangle perimeter: 26
+``` 
+
+
