@@ -35,7 +35,7 @@ Example: `$((10*3))`
 
 On Visual Studio Code, you can also assign changeable values to the expression. An exmaple is:
 ``` 
-#!bin/bash 
+#!/bin/bash 
 
 num1=5
 num2=10
@@ -50,6 +50,8 @@ The sum of 5 and 10 is: 15
 
 Below is another example of another Arithmetic Exapansion, this time with **parameters**.
 ```
+#!/bin/bash
+
 length="$1"
 width="$2"
 
@@ -61,7 +63,7 @@ echo "Rectangle perimeter: $perimeter"
 ```
 then open terminal and enter `chmod +x filename.sh` and run the script followed by the two position parameters 
 ```
-./filename.sh`
+./filename.sh
 8 5
 ```
 ```
