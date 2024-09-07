@@ -1,5 +1,5 @@
 # Level 7 to 8
-The password for the next level is stored in the file **data.txt** next to the word **millionth**
+The password for the next level is stored in the file **data.txt** next to the word **millionth**.
 
 **Enter:** `ssh bandit7@bandit.labs.overthewire.org -p 2220`
 
@@ -11,7 +11,7 @@ The password for the next level is stored in the file **data.txt** next to the w
 - `cat data.txt | grep millionth`
 
 
-### Password:
+### Password for next level:
 ```
 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```

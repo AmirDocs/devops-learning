@@ -11,7 +11,7 @@ The password for the next level is stored in a file called **readme** located in
 - `cat readme`
 
 
-### Password: 
+### Password for next level: 
 
 ```
 ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If

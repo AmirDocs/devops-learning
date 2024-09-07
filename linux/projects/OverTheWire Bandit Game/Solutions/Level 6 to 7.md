@@ -16,7 +16,7 @@ The password for the next level is **stored somewhere on the server** and has al
 - `cat /var/lib/dpkg/info/bandit7.password`
 
 
-### Password:
+### Password for next level:
 ```
 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 ```

@@ -12,7 +12,7 @@ The password for the next level is stored in a hidden file in the **inhere** dir
 - `ls -a`
 - `cat "...Hiding-From-You"`
 
-### Password:
+### Password for next level:
 ```
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```

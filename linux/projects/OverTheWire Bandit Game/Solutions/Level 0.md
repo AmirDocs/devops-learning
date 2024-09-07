@@ -7,7 +7,7 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 
 - `ssh`
 
-### Password:
+### Password for next level:
 ```
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
