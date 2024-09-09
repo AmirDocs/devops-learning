@@ -30,4 +30,4 @@ check_file() {
 file_path="/mnt/c/Users/Amirb/downloads/Linux Guide - Week 1.pdf"
 check_file "$file_path"
 
-chmod +x "/mnt/c/Users/Amirb/downloads/Linux Guide - Week 1.pdf"
+chmod +x "Linux Guide - Week 1.pdf"
