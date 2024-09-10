@@ -8,7 +8,7 @@ The password for the next level is stored in the file **data.txt** in one of the
 ### Commands used:
 
 - `ls`
-- `strings data.txt | grep ==
+- `strings data.txt | grep ==`
 
 
 ### Password for next level:
