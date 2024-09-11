@@ -161,6 +161,30 @@ print_args "Alice" "Bob" "Ahmed"
 ## User Input
 User input allows your script to interact with users and make them more dynamic and responsive. User input allows our script to interact with users and make them more dynamic and responsive. By accepting User Input within functions, we can create powerful interactive scripts. 
 
+The read command is useful for interactive prompts, allowing users to enter information within the script. 
+Commands and arguements provide a direct way to pass user input when calling functions. By combining both methods, we can create functions that offer flexibility in how the user input is accepted. An example of this is below, *Remember to run the script with ./filename.sh and give it executable permissions*:
+
+```
+#!/bin/bash 
+
+
+greet () { 
+     local name 
+
+     if [ $# -eq 0 ]; then
+         echo "what is your name?"
+         read name
+    else
+        name="$1"
+    fi 
+
+    echo "Hello, $name!"
+}
+
+greet "Amir"
+```
+
+
 
 
 
