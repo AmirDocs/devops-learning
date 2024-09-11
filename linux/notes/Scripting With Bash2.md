@@ -5,9 +5,9 @@
   - Command Line Structure
 
 
-## Loops
+## **Loops**
 
-### `While` Loops
+### **`While` Loops**
 While loops allow you to repeatedly execute a block of code an unknown number of times, as long as a certain condition remains true. They provide a powerful too to automate tasks and enable you to repeat a block of code and only exits the loop when a specific condition becomes false.
 
 While loop structure:
@@ -40,7 +40,7 @@ Fruit: Banana
 Fruit: Orange
 ```
 
-### `For` Loops
+### **`For` Loops**
 For loops allow you to iterate over a sequence of values and perform repetitive tasks. They enable you to repeat a block of code for a specified number of iterations or over a sequence of values.
 
 `for` loop structure:
@@ -84,3 +84,86 @@ do
     echo "fruits: $fruit"
 done
 ```
+
+### **Break and Continue**
+
+- `break` allows you to interrupt a loop.
+The example below, when applied to the first `for` loop above, will exit the loop and stop at 2:
+```
+if [ $i -eq 3 ]
+then 
+    break
+fi
+```
+
+- `Continue` will enable you to skip the value, but will continue to output the sequence:
+The example below, when applied to the first `for` loop above, will skip the number 3 and `continue` the sequence with 4 and 5:
+```
+if [ $i -eq 3 ]
+then 
+    break
+fi
+```
+
+
+## **Functions** 
+Functions allow you to turn your code into modules, improve script organisation and enhance code readability. They can be described as mini programmes within your bash script, encapsulating a set of instructions that can be called and executed whenever required.
+
+### **Structure Of Functions**
+
+```
+#!/bin/bash
+
+
+function_name() {
+    # code block to be executed
+}
+```
+
+Example of a greeting function, where it takes "Amir" as the parameter within the function, assigns it to a local variable name, and then uses that within the echo command:
+```
+#!/bin/bash
+
+
+Hello_World() {
+    echo "Hello World!"
+}
+
+greet_person() {
+    local name="$1"
+    echo "Hello, name!"
+}
+
+greet_person "Amir"
+```
+
+### **Parameters**
+Parameters allow us to pass data to functions, making them more versatile and adaptable. Function parameters provide a way to pass data to functions, enabling them to peform specific tasks based on provided input. Special parameters provide additional ways to handle input data. These include $* , $@ , and $#. 
+```
+#!/bin/bash
+
+
+print_args() {
+    echo "Number of arguments: $#"
+    echo "Script name: $0
+    echo "First argument: $12
+    echo "Second argument: $2"
+    echo "All arguments: $0"
+
+}
+
+print_args "Alice" "Bob" "Ahmed"
+```
+- Positional parameters: Allow us to pass data to functions and access them using numbered variables, such as `$1`, `$2`.
+
+- Special parameters provide additional information about the script and the arguments passed to it, such as `$#` for the number of arguments, `$0` for the name of the script, and `$@` for all arguments. Special parameters provide additional ways to handle input data. These include `$*` , `$@` , and `$#`. 
+
+## User Input
+User input allows your script to interact with users and make them more dynamic and responsive. User input allows our script to interact with users and make them more dynamic and responsive. By accepting User Input within functions, we can create powerful interactive scripts. 
+
+
+
+
+
+
+

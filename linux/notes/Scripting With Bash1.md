@@ -1,9 +1,10 @@
 # **SCRIPTING WITH BASH**
 
 ***index***:
+  - 
 
-  - Command Line Structure
 
+## **What is Bash**
   
 **Bash** is a command-line tool that interacts with your computer. A **bash script** is a file containing a series of commands you want the computer to execute automatically.
 Bash enables you to automate tasks, manage systems and boost efficency.
