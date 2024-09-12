@@ -63,9 +63,32 @@ Piping within functions: Piping allows us to pass the output of a command as inp
 
 *These examples would be included in a wider script*
 
+## **Set Commands**
+Set commands make our script more robost and easy to debug.
+
+**Main commands** 
+
+- `set -e` or `set -o errexit`
+at the beginning of the script will print the script but stop executing at the point the error occurs.
+
+- `set -u` or `set -o nounset`
+at the beginning of the script forces the script to stop when it encounters an uninitialized variable, ( a variable that has not been defined ) Example *W: unbound variable*:  
+```
+#!/bin/bash
+
+set -u
+
+X=10 
+y=20 
+Z=$((X + Y + W))
+echo "Z equals: $Z"
+```
+
+- `set -x` prints every command that will be executed to the terminal before it is actually executed. This helps to understand what the script is doing at each step. Useful for troubleshooting scripts. Once your finished debugging you can disable the option in your script using `set +x`
 
 
+- `set -eux` will print every set command and will either stop if there is a point of error or an uninitialized variable and print every command that will be executed to the terminal, before it is actually executed.
 
+**Other Commands**
 
-
-
+- `set -o pipefail` This causes the pipeline to return the exit status of the last command in the pipeline that exited with a non 0 status. This can be very useful when your piping commands together.
