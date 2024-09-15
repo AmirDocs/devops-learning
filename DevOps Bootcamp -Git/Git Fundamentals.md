@@ -89,6 +89,12 @@ This is a scenario of a new **develop** branch from **main/master**. A line of t
 7) `git checkout` - Returns to the main branch.
 8) `git pull` - update recent changes for the repository.
 
+### **Merge Conflicts**
 
+Merge conflicts in Git occur when two branches with changes to the same part of a file are merged. When a merge conflict occurs, Git will mark the file as conflicted, and you will need to address the changes before completing the merge. You can solve merge conflicts in a number of ways such as:
+- Navigating to the `Pull` Request **via the GitHub Web Interface** and resolving the conflict.
+- Solving **Merge Conflicts** During Rebase by using `git rebase branch-name`, editing the conflicted files and running `git add <file-name>` for each resolved file. `git rebase --abort` is used to abort the changes.
+- **Force Pushing** After Conflict Resolution. The conflicts can be resolved locally, by editing the files and comitting the resolution and entering `git push origin branch-name --force`
+- **Squashing** Commits to Avoid Merge Conflicts.  You can start an interactive rebase by using `git rebase -i HEAD~<number-of-commits>`, you can mark commits for squashing by applying `squash` or `s` and then resolve them as you would in a normal rebase. After resolving the changes enter `git push origin branch-name --force`.
 
 
