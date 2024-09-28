@@ -23,7 +23,7 @@ A zone file is compromised of multiple resource records. Each record contains sp
 | **Record name**         |  The Domain name being queried  |
 | **Time to Live (TTL)**  |  Indicates how long the record is valid  |
 | **Class**               |  Namespace of the record information  |
-| **Type**                |  Type of record (A, AAAA, CNAME, MX, TXT ect.) |
+| **Type**                |  Type of record (A, AAAA, CNAME, MX, TXT etc.) |
 | **NS**                  |  Name server record  |
 | **Data**                |  The actual information corresponding to the record type. Like IP address for an A record  |
 
