@@ -24,8 +24,9 @@ To convert a decimal number to binary, divide the number by 2 and record the rem
 | 6/2  = 3,  remainder 0  |   5/2 =  2, remainder 1 |                         |                      | 
 | 3/2  = 1,  remainder 1  |   2/2 =  1, remainder 0 |                         |                      |
 | 1/2  = 0,  remainder 1  |   1/2 =  0, remainder 1 |                         |                      |
-|           Read remainders in reverse                                                               |
 |     **11000000**        |      **10101000**       |       **00000001**      |     **00000001**     |
+
+***Read remainders in reverse !***
 
 
 
