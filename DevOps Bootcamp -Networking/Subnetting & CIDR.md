@@ -1,4 +1,4 @@
-# **Subnetting & CIDR**
+# **subnetting & CIDR**
 
 ## **Subnetting Basics: CIDR notation & Subnet masks etc.**
 **Subnetting** is the process of dividing a larger network (IP address block) into smaller, more manageable sub-networks, or subnets. It helps optimise IP address allocation, improve network performance, and enhance security by isolating network segments.

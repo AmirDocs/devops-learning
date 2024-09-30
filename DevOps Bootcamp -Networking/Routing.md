@@ -1,4 +1,4 @@
-# **Routing**
+# **ROUTING**
 
 ## **How Routing Works?**:
 Routing is determining the best path for data packets to travel across different networks from the source to destination. Like a GPS for data. They use routing tables to makes decisions. Routing ensures data meets its destination quickly and efficiently. Routing is fundamental for the internet to function smoothly.
