@@ -7,7 +7,7 @@
 ## **Binary Basics**
 A binary system is a base-2 number system and therefore only uses the digits, 0 and 1. In binary, each position represents a power of 2, similar to how each position in a decimal number represents a power of 10. The rightmost digit is the least significant bit, while the leftmost digit is the most significant bit.
 
-![alt text](<Screenshot 2024-09-28 133258.png>)
+![Screenshot 2024-09-28 133258](https://github.com/user-attachments/assets/33331cb3-69f9-401e-b0f2-cd4fbd9fa053)
 
 **How to convert an IP Address (decimal) into binary form?**
 To convert a decimal number to binary, divide the number by 2 and record the remainder (Use the lower number if it is not a complete number (example: 19 /2 = 9, remainder 1)). Continue dividing the quotient by 2 until the quotient is 0. The binary number is the remainders read in reverse order (from bottom to top).

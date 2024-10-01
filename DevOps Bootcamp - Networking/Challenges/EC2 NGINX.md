@@ -1,4 +1,4 @@
-# NGINX WEBSITE CHALLENGE:
+# **NGINX WEBSITE CHALLENGE**:
 
 Here is a step-by-step guide on how I created an NGINX website with a custom domain using Cloudflare and an AWS EC2 instance:
 
