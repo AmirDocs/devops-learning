@@ -1,4 +1,4 @@
-# **DOCKER FUNDAMENTALS**
+# **DOCKER LEARNING**
 
 ## **Introduction to containers and Docker**
 
