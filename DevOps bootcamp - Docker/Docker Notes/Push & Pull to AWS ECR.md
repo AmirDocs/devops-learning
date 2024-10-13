@@ -1,4 +1,4 @@
-# Pushing to AWS ECR
+# **PUSHING TO AWS ECR**
 
 ## **What is AWS ECR?**
 Amazon ECR (Elastic Container Registry) is a fully managed container registry service that allows you to store, manage, and deploy Docker container images securely. You can push, pull, store and use images in CI/CD pipelines. The management is simplified, highly reliable, scalable and cost effective. It is an integral part of AWS's DevOps ecosystem which simplifies the containerisation process.
