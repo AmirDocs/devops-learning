@@ -4,6 +4,25 @@
 **Subnetting** is the process of dividing a larger network (IP address block) into smaller, more manageable sub-networks, or subnets. It helps optimise IP address allocation, improve network performance, and enhance security by isolating network segments.
 **CIDR** (Classless Inter-Domain Routing) is a method for allocating and routing IP addresses more efficiently than the traditional IP address classes (Class A, B, C). CIDR enables flexible subnetting by using a suffix to indicate the number of bits in the network portion of an IP address `IP_address/Prefix_length` = 192.168.1.0/24.
 
+### **Understanding CIDR Exercise**:
+```math
+192.168.0.0/24 = 
+192/.168.0.255 (256 IPs)
+```
+```math
+192.168.0.0/16 = 
+192.168.255.255 (65,536 IPs)
+```
+```math
+134.56.78.123/32 = 
+134.56.78.123 (Single IP)
+```
+```math
+0.0.0.0/0
+(All IPs)
+```
+https://www.ipaddressguide.com/cidr
+
 ## **Binary Basics**
 A binary system is a base-2 number system and therefore only uses the digits, 0 and 1. In binary, each position represents a power of 2, similar to how each position in a decimal number represents a power of 10. The rightmost digit is the least significant bit, while the leftmost digit is the most significant bit.
 
@@ -27,8 +46,6 @@ To convert a decimal number to binary, divide the number by 2 and record the rem
 |     **11000000**        |      **10101000**       |       **00000001**      |     **00000001**     |
 
 ***Read remainders in reverse !***
-
-
 
 ## **Calculating subnets and host ranges**
 A Subnet (short for subnetwork) allows you to break down a large IP network into smaller, more manageable networks. This helps improve network performance, efficiency, and security by organising how IP addresses are distributed and how traffic flows within the network.

@@ -42,6 +42,9 @@ IP addressing assigns unique identifiers (IP addresses). It allows devices to lo
 - Uses a 128-bit address space.
 - Written in eight groups of hexadecimal digits separated by colons (**2001:0db8:85a3:0000:0000:8a2e:0370:7334**).
 - Supports an enormous number of addresses (approximately 340 undecillion or $3.4 \times 10^{38}$).
+- In IPv6 `::` means the segments are zero. 
+  + `2001:db8 means 2001:db8` --> Last 6 are zero
+  + `2001:db8::1234:5678` --> middle 4 segments are zero.
 
 IP addresses can either be **static** (permanently assigned to a device) or **dynamic** (temporarily assigned from an existing pool of addresses)
 
