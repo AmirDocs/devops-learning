@@ -1,0 +1,30 @@
+# *TERRAFORM FUNDAMENTALS
+
+## **Terraform State File (THE BLUEPRINT)**:
+The Terraform State File is a record of your existing infrastructure. Its a upto date record of your actual state. This is really important and helps ensure idempotency. With idempotency, no matter how many times you run your terraform configuration, it will produce the same result. If a particular change is made to your configuration it will just apply that particular change.
+
+### **Desired vs Current State**:
+
+**Desired State .tf**: Your configuration, changes your trying to implement or deploy (What your trying to achieve).
+**Current State .tfstate**: Your current terraform State File is your upto date record of your infrastructure (What actually exists).
+
+## **Terraform providers**:
+A Terraform provider is a plugin that allows you to interact with Cloud Platforms, services or other technologies. You can manage resources, security, repos and databases with AWS, Azure, Kubernetes, Cloudflare, Github and other providers.
+
+## **Terraform Commands**:
+
+**`terraform init`**
+
+This is the file command you run in any new or exisiting terraform project. 
+- *initializing the backend...* State of your infrastructure to track resources properly and allow that idempotency.
+- *initializing proivder plugins...* Downloads provider. Terraform  look at your configuration to identify what provider you need (refer to provider block).
+
+**`terraform plan`**
+
+Previewing the changes terraform will make before they happen. Terraform plan allows you to see what your changes will do. Terraform analysis your configuration files, compares them to the current state of your infrastructure and then generates a plan. The output represents your **desired state**.
+
+| Resource | Description |
+| --- | --- |
+| `+` | Create |
+| `~` | Update in-place |
+| `-` | Destroy |
