@@ -55,6 +55,3 @@ Resource = the type (aws) and name (Test)
 ami = The amazon machine image or template for your EC2 instance determining the operating system (ubuntu etc.)
 Instance type = (Example t2.micro)
 Tags = Attribute or way to categorize resources. Not important.
-
-
-
