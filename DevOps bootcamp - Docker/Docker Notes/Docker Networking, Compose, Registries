@@ -23,3 +23,15 @@ At the heart of Docker-compose is a Docker-compose.yml file. This file lists all
 - **Networking**, Docker compose automatically creates a network for your containers to communicate with each other.
 
 In Devops, Docker Compose makes development and testing easier, ensures consistency and enhances teamwork. Everything the team requires will be in a Docker-compose yaml and everyone will have the required enviroment set-up needed.
+
+# **DOCKER REGISTRIES**
+
+Docker registry is a system for storing and sharing Docker images. An online library that stores all your docker images, making them accesible whenever or wherever you need them.
+
+## **Key features of Docker Registries**:
+- **Public Registries (Docker Hub)**: Docker Hub is the default public registry provided by Docker. Anyone can access, pull or push images.
+
+- **Private Registries**: Organisations and developers can set up private registries to store their proprietary or internal images. Allowing them to control access. Examples are AWS Elastic Container Registry (ECR), Azure Container Registry (ACR) and Google Container Registry (GCR).
+
+
+
