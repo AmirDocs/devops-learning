@@ -45,7 +45,7 @@ locals {
     instance_ami = "ami-03cc44329485728gg"
 }
 ```
-2) In your main or ec2.tf, enter
+2) In your ec2.tf, enter
 ```
 ami = local.instance_ami
 ```
@@ -62,7 +62,7 @@ output "instance_id"  {
     value = aws_instance.this.id
 }
 ```
-*this* is the instance name defined in ec2.tf (main.tf). After entering the above code, run `terraform plan` then apply.
+*this* is the instance name defined in ec2.tf. After entering the above code, run `terraform plan` then apply.
 
 ### **Best Practice Output**:
 
