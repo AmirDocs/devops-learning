@@ -53,7 +53,7 @@ Notice how `var.` now becomes `local.`? This is because you are referencing a lo
 
 ## **Output variables**:
 
-Output variables are used to display values after your entire `terraform apply` has run been completed. These can be ID's, IP addresses or other important imformation about your infrastructure. Output variables are useful for passing information to other configurations, automation tools or even just displaying them.
+Output variables are used to display values after your entire `terraform apply` has run been completed. These can be ID's, IP addresses or other important information about your infrastructure. Output variables are useful for passing information to other configurations, automation tools or even just displaying them.
 
 To define an output variable in terraform, use an output block. Inside this block scecify the name of the Output, a description (optional) and the value you want to output. To create an output block, on variables.tf reference:
 ```

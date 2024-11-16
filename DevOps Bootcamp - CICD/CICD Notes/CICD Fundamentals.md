@@ -2,13 +2,13 @@
 
 CI/CD stands for Continuous Integration and Continuous Deployment (or Delivery).
 
-## CI/CD Tools and Services
+## **CI/CD Tools and Services**:
 **CI Tools**: Jenkins, GitLab CI/CD, GitHub Actions, CircleCI, Travis CI
 **Deployment Tools**: Docker, Kubernetes, Ansible, Terraform
 **Testing Tools**: JUnit, Selenium, Pytest, SonarQube
 **Monitoring Tools**: Prometheus, Grafana, Datadog, New Relic
 
-## What does CICD stand for?
+## **What does CICD stand for**?
 **Continuous Integration (CI)**: This is the practice of automating the integration of code changes from multiple contributors into a shared repository, encouraging frequent code commits to detect issues early. Each new code change triggers an automated build, and typically tests are run to catch any errors or bugs as soon as possible. Popular CI tools include *Jenkins*, *GitHub Actions*, *GitLab CI*, and *CircleCI*.
 
 **Continuous Deployment (CD)**: This refers to automating the release of code to production once it passes all testing stages. Continuous Deployment means every change that passes the CI process automatically goes live. This level of automation is ideal for applications where small, frequent updates are common and there's a need for rapid feature releases or bug fixes.
