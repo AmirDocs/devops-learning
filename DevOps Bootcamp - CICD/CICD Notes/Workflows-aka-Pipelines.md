@@ -1,4 +1,4 @@
-**WorkFLOWS AKA PIPLELINES**
+# **WorkFLOWS AKA PIPLELINES**
 
 ## **Syntax and structure**:
 A workflow file is defined as `.github/workflows`
