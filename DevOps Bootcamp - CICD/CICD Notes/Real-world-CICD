@@ -1,0 +1,65 @@
+# **REAL-WORLD CICD**
+
+## **Automated testing and linting**:
+Two crucial practices in helping us maintain code quality. Both of these help us catch errors early and keep our code base clean and reliable.
+
+### **Linting**:
+
+**Definition**: 
+Linting is the process of analysing your code for potential errors and enforcing coding standards (like a spell checker for your code, scanning code for any syntax errors, bugs and deviations).
+
+**Benefits**:
+Maintain code quality. It ensures your code adheres to the coding standards making it easier to read and maintain, aswell as catching any syntax errors before they become bigger problems.
+
+**Tools**: ESLint (Javascript), PYLint (Python)
+
+### **Automated Testing**: 
+
+**Definition**:
+The practice of running tests on your codebase automatically to ensure it works as expected. It involves running test cases that verify different parts of your code and runs these tests automatically everytime you make changes to the code.
+
+**Benefits**:
+Catch any issues or bugs early in the dev process and ensure code quality.
+
+**Tools**:  JUnit, Just, MOCHA (java) pytest (python).
+
+## **Deployment to various environments**:
+
+**Environment Types**: Development -> Staging -> Production.
+
+**Deployment Strategies**: Manual Deployment, Automated Deployment.
+
+**Tools to manage deployments**: AWS, EC2, EKS, LAMBDA, Azure AKS, GCP CloudRun, GKE.
+
+## **Security Best Practices**:
+
+- Secure Your Secrets.
+
+- Control Access.
+
+- Scan for Vulnerabilities.
+
+- Audit and Monitor.
+
+## **Debugging workflow failures**:
+
+### **Common Issues**: 
+
+- Failed Tests: Any reason check your code.
+
+- Dependency Errors: When your project relies on extended libraries or packages that have conflicts or are not installed correctly.
+
+- Configuration Errors: When there are issues in your syntax. You might have missed a space, line or even spelling error.
+
+- Permission Issues: When you dont have the correct permission in the repository to peform specific actions, like accessing secrets or writing in certain directories.
+
+### **Common Solutions**:
+
+- Review Logs: Provides detailed information about what went wrong and can often direct you to an issue.
+
+- Re-run Jobs: Can determine if the failure was a fluke or consistent problem.
+
+- Update Dependencies: Check all dependencies are upto date.
+
+- Check Configuration: Check config files for any syntax errors or incorrect settings. Make sure all environment variables and secrets are correctly set.
+
