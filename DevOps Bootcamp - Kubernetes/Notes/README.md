@@ -115,3 +115,21 @@ Deployments manage replica sets for you. They also add special features that rep
 1) `kubectl create deploy nginx-deployment --image=nginx --replicas=5`output will be deployment.apps/nginx-deployment created.
 
 2) `kubectl get deploy` and you will see 5 pods running.
+
+## Services
+
+A Service is an abstraction that provides a stable endpoint for accessing a set of Pods. In kubernetes pods are ephemeral (temporary). A service helps manage the dynamic nature of pods by providing a stable unchangeable IP, DNS etc. that can let you or others access specific pods.
+
+Three main types of services are:
+
+- **Cluster IP** (default): Exposes the Service only within the Kubernetes cluster. Stable internal IP. Commonly used for internal communication between Pods. This service is only reachable within the cluster (front-end back-end communications)
+
+- **Node Port**: A way to make your service accessible outside the cluster but you don't need the full power of a load balancer. Kubernetes automatically assigns a port from the range `30000-32767` open on every node in the cluster. 
+
+`<Node-IP>:<NodePort>` example: `http://192.168.1.100:30080`.
+
+- **Load balancers**:
+
+When you create a service with a type of (internal) load balancer, kubernetes automatically provisions an *external* load balancer from your cloud provider (like AWS ELB, GCP Load Balancer) to route traffic to the Service inside the Kubernetes cluster. The internal load balancer distributes traffic among your (backend) pods, ensuring your pods share the load evenly. Using the load balancer. Load balancer provides an IP clients can connect to. Useful to make your application accessible to users outside your cluster. Reliability and scalability. An ingress controller creates a load balancer.
+
+
