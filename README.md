@@ -1,13 +1,13 @@
 ## Table of Contents 📚  
-1. [Linux 🐧](#linux-🐧)  
-2. [Bash 🖥️](#bash-🖥️)  
-3. [Networking 🌐](#networking-🌐)  
-4. [Git 🧰](#git-🧰)  
-5. [Docker 🐳](#docker-🐳)  
-6. [AWS ☁️](#aws-☁️)  
-7. [Terraform 🌍](#terraform-🌍)  
-8. [CI/CD 🔄](#cicd-🔄)  
-9. [Kubernetes 🛠️](#kubernetes-🛠️)  
+1. [Linux 🐧](#learning-linux)  
+2. [Bash 🖥️](#learning-bash)  
+3. [Networking 🌐](#learning-networking)  
+4. [Git 🧰](#learning-git)  
+5. [Docker 🐳](#learning-docker)  
+6. [AWS ☁️](#learning-aws)  
+7. [Terraform 🌍](#learning-terraform)  
+8. [CI/CD 🔄](#learning-cicd)  
+9. [Kubernetes 🛠️](#learning-kubernetes)  
 
 ---
 
