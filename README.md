@@ -1,17 +1,18 @@
 ## Table of Contents 📚  
-1. [Linux 🐧](#learning-linux)  
-2. [Bash 🖥️](#learning-bash)  
-3. [Networking 🌐](#learning-networking)  
-4. [Git 🧰](#learning-git)  
-5. [Docker 🐳](#learning-docker)  
-6. [AWS ☁️](#learning-aws)  
-7. [Terraform 🌍](#learning-terraform)  
-8. [CI/CD 🔄](#learning-cicd)  
-9. [Kubernetes 🛠️](#learning-kubernetes)  
+1. [Linux 🐧](#linux)  
+2. [Bash 🖥️](#bash)  
+3. [Networking 🌐](#networking)  
+4. [Git 🧰](#git)  
+5. [Docker 🐳](#docker)  
+6. [AWS ☁️](#aws)  
+7. [Terraform 🌍](#terraform)  
+8. [CI/CD 🔄](#cicd)  
+9. [Kubernetes 🛠️](#kubernetes)  
 
 ---
 
 ## Linux 🐧  
+<a id="linux"></a>  
 [**Explore the Linux Folder**](learning-linux)
 
 Linux is the backbone of most server environments and critical for managing DevOps infrastructure. Learnings include:  
@@ -24,6 +25,7 @@ Linux is the backbone of most server environments and critical for managing DevO
 ---
 
 ## Bash 🖥️  
+<a id="bash"></a>  
 [**Explore the Bash Folder**](learning-bash)
 
 Bash scripting allows for the automation of repetitive tasks, saving time and reducing errors. This folder includes:  
@@ -35,6 +37,7 @@ Bash scripting allows for the automation of repetitive tasks, saving time and re
 ---
 
 ## Networking 🌐  
+<a id="networking"></a>  
 [**Explore the Networking Folder**](learning-networking)
 
 Networking is essential for understanding cloud-based and containerised environments. Topics covered:  
@@ -46,6 +49,7 @@ Networking is essential for understanding cloud-based and containerised environm
 ---
 
 ## Git 🧰  
+<a id="git"></a>  
 [**Explore the Git Folder**](learning-git)
 
 Git enables collaboration and version control, which are critical for modern software development. This folder explores:  
@@ -57,6 +61,7 @@ Git enables collaboration and version control, which are critical for modern sof
 ---
 
 ## Docker 🐳  
+<a id="docker"></a>  
 [**Explore the Docker Folder**](learning-docker)
 
 Docker simplifies application deployment through containerisation, ensuring consistency across environments. Topics include:  
@@ -68,6 +73,7 @@ Docker simplifies application deployment through containerisation, ensuring cons
 ---
 
 ## AWS ☁️  
+<a id="aws"></a>  
 [**Explore the AWS Folder**](learning-aws)
 
 AWS provides scalable cloud infrastructure, a cornerstone of modern DevOps practices. Topics explored:  
@@ -79,6 +85,7 @@ AWS provides scalable cloud infrastructure, a cornerstone of modern DevOps pract
 ---
 
 ## Terraform 🌍  
+<a id="terraform"></a>  
 [**Explore the Terraform Folder**](learning-terraform-iac)
 
 Terraform automates infrastructure provisioning, enabling reproducible and scalable deployments. This folder contains:  
@@ -90,6 +97,7 @@ Terraform automates infrastructure provisioning, enabling reproducible and scala
 ---
 
 ## CI/CD 🔄  
+<a id="cicd"></a>  
 [**Explore the CI/CD Folder**](learning-cicd) 
 
 CI/CD pipelines automate workflows, ensuring faster and more reliable software delivery. This folder explores:  
@@ -101,10 +109,11 @@ CI/CD pipelines automate workflows, ensuring faster and more reliable software d
 ---
 
 ## Kubernetes 🛠️  
+<a id="kubernetes"></a>  
 [**Explore the Kubernetes Folder**](learning-kubernetes)
 
 Kubernetes orchestrates containers, enabling scalability and reliability for modern applications. Topics include:  
 - Setting up clusters and deploying applications.  
 - Managing pods, services, and deployments.  
 
-**Highlight:** The `Notes` folder offers insights into Kubernetes commands, pods, cluster management, networking and YAML configurations.  
+**Highlight:** The `Notes` folder offers insights into Kubernetes commands, pods, cluster management, networking, and YAML configurations.  
