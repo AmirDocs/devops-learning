@@ -132,4 +132,47 @@ Three main types of services are:
 
 When you create a service with a type of (internal) load balancer, kubernetes automatically provisions an *external* load balancer from your cloud provider (like AWS ELB, GCP Load Balancer) to route traffic to the Service inside the Kubernetes cluster. The internal load balancer distributes traffic among your (backend) pods, ensuring your pods share the load evenly. Using the load balancer. Load balancer provides an IP clients can connect to. Useful to make your application accessible to users outside your cluster. Reliability and scalability. An ingress controller creates a load balancer.
 
+## Cluster IP task documentation
+
+How a clusterIP service works. 
+
+Create a service of cluster IP type and expose it. You can create multiple types of kubernetes services/kinds in a simple yaml file but entering **---** under the first one.
+
+1) create the file `vi nginx-svc.yaml` and enter the config in [service config](../nginx-svc.yaml) which includes the deployment and service.
+
+2) Enter `kubectl apply -f nginx-svc.yaml` to apply the config file and `kubectl get svc` to check.
+
+3) There are two ways to test the cluster IP out, one is the *port forward* method:
+
+- **Port forward**: Port forward allows you to access the service cluster IP on your host. It will forward to a port 8080 and access it using port 80. `kubectl port-forward svc/nginx-svc 8080:80`.
+
+## Storage - Persistent storage
+
+In Kubernetes pods are ephemeral, meaning they are designed to be short-lived, persistent storage refers to storage that retains data beyond the lifecycle of a pod. Kubernetes provides a way to manage persistent storage using Persistent Volumes (PVs) and Persistent Volume Claims (PVCs). It ensures data reliability beyond pod lifecycle.
+
+ - **Persistent Volumes (PVs)** - A PV is a piece of storage in the cluster that has been provisioned by an administrator. It is an abstraction over physical storage devices, such as disks, and can be provisioned from a variety of sources (e.g., cloud storage, NFS, iSCSI, etc.).
+
+ - **Persistent Volumes Claim (PVC)** - A PVC is a request for storage by a user. It specifies size, access modes, and storage class. Kubernetes will find a matching PV for the PVC, bind them, and make the storage available to the pod.
+
+ *A StorageClass simply defines the types of storage available in your cluster and allows dynamic provisioning of PVs.*
+
+ ## ConfigMaps - for configuration data
+
+ConfigMaps are a way to store non-sensitive configuration data in a key-value pair format, which can be used by pods or other resources, separating configuration from application code, allowing you to modify configuration settings without having to rebuild or redeploy your container images.
+
+### Create ConfigMap documentation:
+
+Create a ConfigMap named my-config in kubernetes with:
+
+*Note: `--from-literal` specifies literal key-value pairs directly in the command line.
+
+**Two key-value pairs**
+1) Key: APP_COLOUR, Value: blue
+2) Key: APP_MODE, Value: production
+
+```
+kubectl create configmap my-config --from-literal=APP_COLOUR=blue --from-literal=APP_MODE=production
+```
+and use `kubectl get cm` (to view config maps)
+
 
