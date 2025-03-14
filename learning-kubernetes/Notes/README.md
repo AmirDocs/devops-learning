@@ -203,3 +203,67 @@ You can mount secret as volumes or expose/set them as environment variables
 ✅ This Pod retrieves sensitive credentials from a Secret called my-secret.
 ✅ It makes these credentials available both as environment variables and as files inside a mounted volume.
 ✅ This approach improves security by not hardcoding credentials inside the Pod spec.
+
+## K8 Networking
+
+Kubernetes networking is designed to allow seamless communication between Pods, Services, and external resources. It follows a flat network model, meaning every Pod can communicate with every other Pod without NAT (Network Address Translation).
+
+- Each Pod gets its own IP address (unique within the cluster).
+- All Nodes can communicate with all Pods without NAT.
+- Pods communicate via internal IPs, but they don’t persist if a Pod is restarted, **services** can be used to provide a stable IP and DNS name.
+
+1) create nginx pod `kubectl run nginx --image=nginx`
+2) Create Apache Pod `kubectl run apache --image=httpd`
+3) `kubectl get pods -o wide` shows extended information about the pods such as IP address. 
+4) Enter nginx pod with `kubectl exec -it nginx -- sh` and curl with IP addresses to test availability/response.
+
+# Service Directory & DNS Introduction
+
+How DNS works on kubernetes, show by testing it on 2 deployments. Apache Pod/deployment and an index deployment.
+
+A typical DNS name follows this structure:
+```
+<SERVICE_NAME>.<NAMESPACE>.svc.cluster.local
+```
+
+**How to test Kubernetes DNS**
+
+1) Create Apache deployment: `kubectl create deployment apache --image=httpd --replicas=1` and `kubectl get deploy` to view it.
+2) Expose deployment with `kubectl expose deployment apache --port=80` and `kubectl get svc` to view it. *This command allows us to create a cluster by default, a cluster IP service.*
+
+3) Create Nginx deployment: `kubectl create deployment nginx --image=nginx --replicas=1`.
+4) Expose deployment with `kubectl expose deployment nginx --port=80` and `kubectl get svc` to view it.
+
+Spin up a public pod created for debugging by mo-abukar.
+`kubectl run tmp-shell --rm -i --tty --image=moabukar/netshoot`
+
+✅ You can test Kubernetes DNS using nslookup, dig, or ping from inside a Pod.
+
+- To check if you can access apache use: `wget -qO - apache`. It should return `it works`. 
+- To check if you can access nginx use: `wget -qO - nginx`. It should return `welcome to nginx`.
+
+**Network Policies**
+
+A NetworkPolicy is a Kubernetes resource that controls which Pods can communicate with each other and with external services. By default, all Pods in a cluster can communicate freely unless a Network Policy is applied to restrict traffic. Once a NetworkPolicy is applied → Only the allowed traffic is permitted, all others are denied by default.
+
+A network policy works by:
+- Defining rules to allow or deny traffic based on labels, namespaces, and IP blocks.
+- Only applies to Pods with matching labels.
+- Works with network plugins (e.g., Calico, Cilium, Flannel) that support Network Policies.
+
+**Basic Structure of a Network Policy consists of:**
+
+1) podSelector → Selects the target Pods.
+2) ingress → Defines incoming allowed traffic.
+3) egress → Defines outgoing allowed traffic.
+4) policyTypes → Specifies whether the policy applies to ingress (incoming) or egress (outgoing).
+
+Setup Ingress Controller, create Ingress Resources, Verify Ingress Configuration.
+
+A Network Policy consists of:
+
+- PodSelector → Selects the target Pods.
+- Ingress → Defines incoming allowed traffic.
+- Ingress controller → a Kubernetes component that manages Ingress resources to control external HTTP(S) traffic into the cluster.
+- Egress → Defines outgoing allowed traffic.
+- PolicyTypes → Specifies whether the policy applies to ingress (incoming) or egress (outgoing).
