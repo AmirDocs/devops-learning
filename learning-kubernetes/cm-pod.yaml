@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cm-demo
+spec:
+  containers:
+  - name: demo-container
+    image: busybox
+    command: ["/bin/sh", "-c", "env && sleep 3600"]   # Command executed inside the container. sleep 3600 runs container 1hr.
+    env:   # # Injecting Environment Variables from a ConfigMap from here...
+    - name: APP_COLOUR
+      valueFrom:
+        configMapKeyRef:
+          name: my-config 
+          key: APP_COLOUR  
+    - name: APP_MODE
+      valueFrom:
+        configMapKeyRef:   # specifies which keys from my-config to use.
+          name: my-config
+          key: APP_MODE   # to here. 
+    volumeMounts:  # Mounting ConfigMap as a Volume
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: my-config

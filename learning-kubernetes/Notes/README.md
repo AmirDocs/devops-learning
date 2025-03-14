@@ -104,7 +104,7 @@ In deployments, if you delete a pod, deployments will automatically deploy anoth
 
 Deployment Imperative can be launched with `kubectl create deploy nginx-deployment --image=nginx --replicas=2`
 
-# Replica Sets documentation
+## Replica Sets documentation
 
 A ReplicaSet in Kubernetes ensures that a specified number of identical Pods are running at any given time. Useful for maintaining the desired state of the application and ensures it remains available, even if individual pods fail.
 
@@ -156,15 +156,11 @@ In Kubernetes pods are ephemeral, meaning they are designed to be short-lived, p
 
  *A StorageClass simply defines the types of storage available in your cluster and allows dynamic provisioning of PVs.*
 
- ## ConfigMaps - for configuration data
+## ConfigMaps (for configuration data) documentation:
 
-ConfigMaps are a way to store non-sensitive configuration data in a key-value pair format, which can be used by pods or other resources, separating configuration from application code, allowing you to modify configuration settings without having to rebuild or redeploy your container images.
+ConfigMaps are a way to store non-sensitive configuration data in a key-value pair format, which can be used by pods or other resources, separating configuration from application code, allowing you to modify configuration settings without having to rebuild or redeploy your container images. Create a ConfigMap named my-config in kubernetes with:
 
-### Create ConfigMap documentation:
-
-Create a ConfigMap named my-config in kubernetes with:
-
-*Note: `--from-literal` specifies literal key-value pairs directly in the command line.
+*Note: `--from-literal` specifies literal key-value pairs directly in the command line.*
 
 **Two key-value pairs**
 1) Key: APP_COLOUR, Value: blue
@@ -173,6 +169,37 @@ Create a ConfigMap named my-config in kubernetes with:
 ```
 kubectl create configmap my-config --from-literal=APP_COLOUR=blue --from-literal=APP_MODE=production
 ```
-and use `kubectl get cm` (to view config maps)
+and use: 
 
+- `kubectl get cm` (to view config maps)
+- `kubectl get cm my-config -o yaml` (to view yaml file)
 
+There are my ways to inject environment variables and configuration data into a container, such as using a ConfigMap or secrets. For this we will focus on the ConfigMaps method. Below is part of a Kubernetes Pod or Deployment definition for ConfigMaps:
+
+-  Create a pod that uses the above config `vi cm-pod.yaml` and enter config on [cm-pod yaml](../cm-pod.yaml). This full YAML defines a Kubernetes Pod that runs a BusyBox (a lightweight Linux distribution) container. Run the pod with `kubectl apply -f cm-pod.yaml`
+
+A summary of what has happened:
+1️⃣ The Pod runs a BusyBox container that prints environment variables and sleeps.
+2️⃣ It pulls APP_COLOUR & APP_MODE from a ConfigMap (my-config) and injects them as env vars.
+3️⃣ It also mounts my-config as a volume at /etc/config, where each key becomes a file.
+4️⃣ This setup gives flexibility—allowing apps to read configs from either env vars or files.
+
+**Useful checks**
+1) To check the variables inside the pod, use: `kubectl exec -it cm-demo -- env | grep APP_`
+2) To check the value of the APP_COLOUR key from the ConfigMap that was mounted as a file in /etc/config/APP_COLOUR: kubectl exec -it cm-demo -- cat /etc/config/APP_COLOUR.
+3) To check the value of the APP_MODE key from the ConfigMap that was mounted as a file in /etc/config/APP_MODE: kubectl exec -it cm-demo -- cat /etc/config/APP_MODE.
+
+## Secrets documentation
+
+Kubernetes Secrets are used to store sensitive information such as passwords, API keys, SSH keys, or TLS certificates securely within a cluster. Unlike ConfigMaps, which store non-sensitive data, Secrets are encrypted and not exposed in plain text. base64 encryption can reveal the password using `echo "bXlwYXNzd29yZA==" | base64 -d`
+
+You can mount secret as volumes or expose/set them as environment variables
+
+1) create secret with `kubectl create secret generic my-secret --from-literal=username=myuser --from-literal=password=mypassword`.
+2) To view secret in yaml `kubectl get secrets my-secret -o yaml`
+3) generate pod with `kubectl apply -f secret-pod.yaml`
+4) and enter pod using `kubectl exec -it secret-demo-pod -- /bin/sh` then view username with `echo $SECRET_USERNAME`. Exit shell with `exit`.
+
+✅ This Pod retrieves sensitive credentials from a Secret called my-secret.
+✅ It makes these credentials available both as environment variables and as files inside a mounted volume.
+✅ This approach improves security by not hardcoding credentials inside the Pod spec.
