@@ -32,7 +32,6 @@ Deployment
 | `kubectl describe deployment nginx-deployment` | Displays detailed information about a specific Deployment |
 | `kubectl scale deployment <deployment-name> --replicas=<num>` | Scale a deployment |
 | `kubectl expose deployment <deployment-name> --type=NodePort --port=<port>` | Expose a deployment as a service |
-
 Cloud Providers
 | `kubectl config use-context <context>` | list clusters in AWS EKS |
 | `az aks list --output table` | list clusters in AWS AKS |
