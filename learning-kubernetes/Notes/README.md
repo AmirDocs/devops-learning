@@ -217,7 +217,7 @@ Kubernetes networking is designed to allow seamless communication between Pods, 
 3) `kubectl get pods -o wide` shows extended information about the pods such as IP address. 
 4) Enter nginx pod with `kubectl exec -it nginx -- sh` and curl with IP addresses to test availability/response.
 
-# Service Directory & DNS Introduction
+## Service Directory & DNS Introduction
 
 How DNS works on kubernetes, show by testing it on 2 deployments. Apache Pod/deployment and an index deployment.
 
@@ -257,8 +257,6 @@ A network policy works by:
 2) ingress → Defines incoming allowed traffic.
 3) egress → Defines outgoing allowed traffic.
 4) policyTypes → Specifies whether the policy applies to ingress (incoming) or egress (outgoing).
-
-Setup Ingress Controller, create Ingress Resources, Verify Ingress Configuration.
 
 A Network Policy consists of:
 
