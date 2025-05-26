@@ -97,4 +97,10 @@ Merge conflicts in Git occur when two branches with changes to the same part of 
 - **Force Pushing** After Conflict Resolution. The conflicts can be resolved locally, by editing the files and comitting the resolution and entering `git push origin branch-name --force`
 - **Squashing** Commits to Avoid Merge Conflicts.  You can start an interactive rebase by using `git rebase -i HEAD~<number-of-commits>`, you can mark commits for squashing by applying `squash` or `s` and then resolve them as you would in a normal rebase. After resolving the changes enter `git push origin branch-name --force`.
 
-
+#### Deleting the last 16 commits and pushing the local changes to remote repo.
+1. git add .
+2. git commit -m "saving changes before rebase
+3. git rebase -i HEAD~16
+4. git rebase --continue
+5. git config pull.rebase true
+6. git push origin main --force
